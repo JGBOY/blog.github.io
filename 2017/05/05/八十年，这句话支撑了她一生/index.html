@@ -120,7 +120,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/05/八十年，这句话支撑了她一生/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="听到祖母病重，我心里一愣，放下了手里所有的活，匆匆回赶，生怕留下人生中又一个遗憾。回去那天，天上瓢泼大雨，转了几次车，最后搭了一辆摩托车在山路上迎雨前行。 -1- 看到祖母时，才知她已有几天下不来床。 走到家门前，那个熟悉的身影在门前出现，她几乎站不起来，拄着拐杖，靠在墙边，佝偻着病体用微弱的声音说着：“你回来啦，饭给你煮好了，我起不来，请的隔壁幺婶来给你弄的。” 我强忍住心疼，安慰着病重的祖母，">
-<meta property="og:updated_time" content="2017-07-11T14:30:31.816Z">
+<meta property="og:updated_time" content="2017-07-11T15:20:46.294Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="八十年，这句话支撑了她一生">
 <meta name="twitter:description" content="听到祖母病重，我心里一愣，放下了手里所有的活，匆匆回赶，生怕留下人生中又一个遗憾。回去那天，天上瓢泼大雨，转了几次车，最后搭了一辆摩托车在山路上迎雨前行。 -1- 看到祖母时，才知她已有几天下不来床。 走到家门前，那个熟悉的身影在门前出现，她几乎站不起来，拄着拐杖，靠在墙边，佝偻着病体用微弱的声音说着：“你回来啦，饭给你煮好了，我起不来，请的隔壁幺婶来给你弄的。” 我强忍住心疼，安慰着病重的祖母，">
@@ -141,8 +141,8 @@
     },
     algolia: {
       applicationID: '',
-      apiKey: '',
-      indexName: '',
+      apiKey: '97ca409fa5c2e0a1485743bec0f7ef88',
+      indexName: 'hexo',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -248,16 +248,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -274,6 +264,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -299,9 +299,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -365,6 +403,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/转载文章/" itemprop="url" rel="index">
+                    <span itemprop="name">转载文章</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -517,6 +577,29 @@
 
     <div class="post-spread">
       
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
     </div>
   </div>
 
@@ -568,6 +651,15 @@
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
@@ -809,6 +901,19 @@
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.1"></script>
 
 
 

@@ -47,7 +47,7 @@
     <link href="http://yoursite.com/2017/05/15/%E5%AE%89%E8%A3%85win8.1+kali%20linux%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%90%8E%E6%B2%A1%E6%9C%89%E5%BC%95%E5%AF%BC%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
     <id>http://yoursite.com/2017/05/15/安装win8.1+kali linux双系统后没有引导的解决办法/</id>
     <published>2017-05-15T14:54:07.000Z</published>
-    <updated>2017-07-11T13:42:56.370Z</updated>
+    <updated>2017-07-11T15:14:34.839Z</updated>
     
     <content type="html"><![CDATA[<p>本来想装个linux玩玩，没想到一装就是好几天，这几天也是蛮累人的，遇到各种各样的问题，尤其是装kali linux时，简直了。。。。<br>废话不多说，安装过程啥的就略过吧，直接进入主题吧！<br>在装完kali linux时，遇到了一开机就直接进入windows,没有引导，后来才发现，我电脑一开始是通过UEFI安装的win8.1，因为UEFI默认锁定，无法添加引导项，就因为这样，发现重启后没有GRUB菜单，然后去网上找各种教程，都没能解决，像那些使用EasyBCD，EasyEFI之类的软件添加引导时，你会发现，选项那里是灰色的，原因就是因为你目前使用的windows原来可能是UEFI模式下安装的，所以用软件是添加不了的（起码我目前尝试过的方法中不起作用），那现在怎么办，其实我们就是要能够添加到kali linux的启动项就行了。解决办法如下：<br><a id="more"></a><br>（以下操作以各位的具体机型操作，不过也是大同小异，本人用的是宏碁E5）</p>
 <h2 id="首先进入bios中"><a href="#首先进入bios中" class="headerlink" title="首先进入bios中"></a>首先进入bios中</h2><h2 id="找到Security-保证Secure-boot-mode为Custom-开启这个或许需要设置超级用户密码"><a href="#找到Security-保证Secure-boot-mode为Custom-开启这个或许需要设置超级用户密码" class="headerlink" title="找到Security,保证Secure boot mode为Custom,开启这个或许需要设置超级用户密码"></a>找到Security,保证Secure boot mode为Custom,开启这个或许需要设置超级用户密码</h2><h2 id="向下找到Select-an-UEFI-file-for-executing"><a href="#向下找到Select-an-UEFI-file-for-executing" class="headerlink" title="向下找到Select an UEFI file for executing"></a>向下找到Select an UEFI file for executing</h2><h2 id="然后回车进入-EFI-kali-grubx64-efi-选中后，随便输入个名字，记得就行了，搞定后回车会直接跳到Boot页面。"><a href="#然后回车进入-EFI-kali-grubx64-efi-选中后，随便输入个名字，记得就行了，搞定后回车会直接跳到Boot页面。" class="headerlink" title="然后回车进入/EFI/kali/grubx64.efi,选中后，随便输入个名字，记得就行了，搞定后回车会直接跳到Boot页面。"></a>然后回车进入/EFI/kali/grubx64.efi,选中后，随便输入个名字，记得就行了，搞定后回车会直接跳到Boot页面。</h2><h2 id="会看见有个EFI-File-Boot-0的选项，将此项移到最前就行了。"><a href="#会看见有个EFI-File-Boot-0的选项，将此项移到最前就行了。" class="headerlink" title="会看见有个EFI File Boot 0的选项，将此项移到最前就行了。"></a>会看见有个EFI File Boot 0的选项，将此项移到最前就行了。</h2><h2 id="保存后重启就可以选择windows或者kali-linux进入了"><a href="#保存后重启就可以选择windows或者kali-linux进入了" class="headerlink" title="保存后重启就可以选择windows或者kali linux进入了"></a>保存后重启就可以选择windows或者kali linux进入了</h2><p>其实主要就是在装完linux后要找到引导项就行了，此方法适用在UFEI模式下装的windows，然后装linux双系统的情况下，在此之前网上的很多方法都试了，就是不起作用，如果大家有更好的方法，就分享出来吧！</p>
@@ -59,6 +59,8 @@
       &lt;p&gt;本来想装个linux玩玩，没想到一装就是好几天，这几天也是蛮累人的，遇到各种各样的问题，尤其是装kali linux时，简直了。。。。&lt;br&gt;废话不多说，安装过程啥的就略过吧，直接进入主题吧！&lt;br&gt;在装完kali linux时，遇到了一开机就直接进入windows,没有引导，后来才发现，我电脑一开始是通过UEFI安装的win8.1，因为UEFI默认锁定，无法添加引导项，就因为这样，发现重启后没有GRUB菜单，然后去网上找各种教程，都没能解决，像那些使用EasyBCD，EasyEFI之类的软件添加引导时，你会发现，选项那里是灰色的，原因就是因为你目前使用的windows原来可能是UEFI模式下安装的，所以用软件是添加不了的（起码我目前尝试过的方法中不起作用），那现在怎么办，其实我们就是要能够添加到kali linux的启动项就行了。解决办法如下：&lt;br&gt;
     
     </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
     
     
       <category term="操作系统" scheme="http://yoursite.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
@@ -72,7 +74,7 @@
     <link href="http://yoursite.com/2017/05/11/%E9%9D%A2%E8%AF%95%E5%95%A6%EF%BC%81%E9%9D%A2%E8%AF%95%E5%95%A6%EF%BC%81/"/>
     <id>http://yoursite.com/2017/05/11/面试啦！面试啦！/</id>
     <published>2017-05-11T15:20:26.000Z</published>
-    <updated>2017-07-11T14:12:06.339Z</updated>
+    <updated>2017-07-11T15:18:15.247Z</updated>
     
     <content type="html"><![CDATA[<p>想到明天要去面试，好紧张哟！<br>吃颗糖果先，淡定淡定。。<br>哈哈！<br>祝自己一切顺利······</p>
 ]]></content>
@@ -84,6 +86,8 @@
     
     </summary>
     
+      <category term="说说而已介!" scheme="http://yoursite.com/categories/%E8%AF%B4%E8%AF%B4%E8%80%8C%E5%B7%B2%E4%BB%8B/"/>
+    
     
       <category term="自语" scheme="http://yoursite.com/tags/%E8%87%AA%E8%AF%AD/"/>
     
@@ -94,7 +98,7 @@
     <link href="http://yoursite.com/2017/05/05/%E8%AF%A5%E4%BC%91%E6%81%AF%E4%BA%86/"/>
     <id>http://yoursite.com/2017/05/05/该休息了/</id>
     <published>2017-05-04T18:03:22.000Z</published>
-    <updated>2017-07-11T14:30:45.025Z</updated>
+    <updated>2017-07-11T15:17:43.700Z</updated>
     
     <content type="html"><![CDATA[<p>今天忙到很晚了，搭建此BLOG确实有点累人，还有很多功能需要扩展，并且有些功能出错了，很累，还是先睡了吧！<br>希望明天有个好进展吧！安。。。。</p>
 <p>华丽的分割线—————-<br><a id="more"></a><br>作为小白的我&lt;笑脸&gt;<br>请大家多多支持！</p>
@@ -107,6 +111,8 @@
     
     </summary>
     
+      <category term="说说而已介!" scheme="http://yoursite.com/categories/%E8%AF%B4%E8%AF%B4%E8%80%8C%E5%B7%B2%E4%BB%8B/"/>
+    
     
       <category term="自语" scheme="http://yoursite.com/tags/%E8%87%AA%E8%AF%AD/"/>
     
@@ -117,7 +123,7 @@
     <link href="http://yoursite.com/2017/05/05/%E5%85%AB%E5%8D%81%E5%B9%B4%EF%BC%8C%E8%BF%99%E5%8F%A5%E8%AF%9D%E6%94%AF%E6%92%91%E4%BA%86%E5%A5%B9%E4%B8%80%E7%94%9F/"/>
     <id>http://yoursite.com/2017/05/05/八十年，这句话支撑了她一生/</id>
     <published>2017-05-04T18:00:32.000Z</published>
-    <updated>2017-07-11T14:30:31.816Z</updated>
+    <updated>2017-07-11T15:20:46.294Z</updated>
     
     <content type="html"><![CDATA[<p>听到祖母病重，我心里一愣，放下了手里所有的活，匆匆回赶，生怕留下人生中又一个遗憾。回去那天，天上瓢泼大雨，转了几次车，最后搭了一辆摩托车在山路上迎雨前行。</p>
 <p>-1-</p>
@@ -164,6 +170,8 @@
     
     </summary>
     
+      <category term="转载文章" scheme="http://yoursite.com/categories/%E8%BD%AC%E8%BD%BD%E6%96%87%E7%AB%A0/"/>
+    
     
       <category term="散文" scheme="http://yoursite.com/tags/%E6%95%A3%E6%96%87/"/>
     
@@ -174,7 +182,7 @@
     <link href="http://yoursite.com/2017/05/05/Linux%E6%8E%A2%E7%B4%A2%E4%B9%8B%E6%97%85%20%20%E5%BC%80%E5%AE%97%E6%98%8E%E4%B9%89+%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E7%AC%AC%E4%B8%80%E8%AF%BE%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AFLinux%EF%BC%9F/"/>
     <id>http://yoursite.com/2017/05/05/Linux探索之旅  开宗明义+第一部分第一课：什么是Linux？/</id>
     <published>2017-05-04T17:15:19.000Z</published>
-    <updated>2017-07-11T14:14:21.324Z</updated>
+    <updated>2017-07-11T15:14:58.060Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <h2 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h2><p>1.开宗明义</p>
@@ -254,6 +262,8 @@
     
     </summary>
     
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
     
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
@@ -266,7 +276,7 @@
     <link href="http://yoursite.com/2017/02/18/%E8%BD%AC%E8%BD%BD%E3%80%8A%E8%AF%B8%E8%91%9B%E4%BA%AE%E5%B9%B4%E8%BD%BB%E6%97%B6%E5%9C%A8%E9%9A%86%E4%B8%AD%E7%9A%84%E9%9A%90%E5%B1%85%E7%94%9F%E6%B4%BB%E3%80%8B/"/>
     <id>http://yoursite.com/2017/02/18/转载《诸葛亮年轻时在隆中的隐居生活》/</id>
     <published>2017-02-18T04:55:12.000Z</published>
-    <updated>2017-07-11T14:31:18.144Z</updated>
+    <updated>2017-07-11T15:16:22.515Z</updated>
     
     <content type="html"><![CDATA[<p>一部《三国演义》，对诸葛亮的描写几乎达到了完美的程度。他不仅是智慧的化身，更是道德的楷模，集忠贞、信义、坚韧、睿智、机敏、勤勉、清廉于一身。作者将自己心中的价值观念与理想追求寄托在他的身上，并对其外在形象也进行了一番精心的塑造，描写为手执羽扇、头戴纶巾、身披鹤氅，一副仙风道骨、飘逸潇洒的名士形象。 那么，历史上诸葛亮的真实形象如何呢？《三国志》载，诸葛亮“身长八尺”，另据晋代裴启《语林》记载：“诸葛武侯与宣王在渭滨，将战，宣王戎服莅事；使人视武侯—乘素舆、葛巾、毛扇，指麾三军，皆随其进止。宣王闻而叹曰：‘可谓名士矣！’”</p>
 <p>诸葛亮的形象通过对手之口加以叙说，令人感到更加真实可信。那么，诸葛亮何以形成了一副与传统儒生迥然有别的具有仙风道骨的名士形象呢？这与他独特的人生追求和生活阅历相关，具体而言，是襄阳隆中十年的隐居生活改造了他，塑造了他，从而结出了一颗神奇的果实。</p>
@@ -307,6 +317,8 @@
     
     </summary>
     
+      <category term="转载文章" scheme="http://yoursite.com/categories/%E8%BD%AC%E8%BD%BD%E6%96%87%E7%AB%A0/"/>
+    
     
       <category term="--历史" scheme="http://yoursite.com/tags/%E5%8E%86%E5%8F%B2/"/>
     
@@ -317,7 +329,7 @@
     <link href="http://yoursite.com/2017/02/17/%E8%BD%AC%E8%BD%BD%E3%80%8A%E4%BC%BC%E6%B0%B4%E6%B5%81%E5%B9%B4%EF%BC%8C%E5%AE%89%E7%84%B6%E5%90%91%E6%9A%96%E3%80%8B/"/>
     <id>http://yoursite.com/2017/02/17/转载《似水流年，安然向暖》/</id>
     <published>2017-02-17T07:29:10.000Z</published>
-    <updated>2017-07-11T14:31:08.008Z</updated>
+    <updated>2017-07-11T15:15:56.828Z</updated>
     
     <content type="html"><![CDATA[<h2 id="欢迎来到我的博客！"><a href="#欢迎来到我的博客！" class="headerlink" title="欢迎来到我的博客！"></a>欢迎来到我的博客！</h2><p>青春的时光，总是匆匆流走。而我，早就被埋藏在流年的大雨里，痛苦挣扎。青春，是一场痛苦的修行。这场雨，下得好大，好急，瞬间，残云翻滚，电闪雷鸣，闪电击中我的心灵，响雷叩击我的耳朵，我的心瞬间伤痕累累，我的耳朵顷刻听不见任何声音，我化作一颗烧焦的果实，埋葬在泥土里，身体停止了生长。</p>
 <p>我在自闭的空间里回忆，回忆我的童年往事，温习我的青春年华。</p>
@@ -347,6 +359,8 @@
 &lt;p&gt;那时，我们每餐只有黄豆拌饭，那香香的黄豆汁，混合着廉价的粗粗的米饭，虽然简单，但味道十分可口。那时，大米是很奢侈的食物，不是顿顿都有得吃，于是，母亲便做馒头来代替。母亲的馒头，是用面粉和水充分的搅拌均匀，再经过几个小时的发酵，变成油亮亮，又大又圆的面粉团，看上去像天上皎洁的月亮，馋得我直流口水。等充分发酵完毕，母亲将面粉团分成一个个较大的小面粉团，然后将它们搓成一个个长条，再用刀将每个长条切成一块块，放进锅里蒸，最终，一个个诱人的馒头便出炉了。那一个个馒头，香气扑鼻，令人垂涎三尺。&lt;br&gt;
     
     </summary>
+    
+      <category term="转载文章" scheme="http://yoursite.com/categories/%E8%BD%AC%E8%BD%BD%E6%96%87%E7%AB%A0/"/>
     
     
       <category term="--进行时" scheme="http://yoursite.com/tags/%E8%BF%9B%E8%A1%8C%E6%97%B6/"/>
